@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Violence Detection AI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            padding: 40px;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #222;
+        }
+
+        form {
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+
+        .video-container {
+            margin-top: 40px;
+        }
+
+        img {
+            width: 720px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        }
+
+        .result-label {
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .safe {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .alert {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🛡️ Violence Detection AI</h1>
+
+    <form method="POST" enctype="multipart/form-data" action="/upload">
+        <input type="file" name="video" accept=".mp4" required>
+        <button type="submit">Upload & Analyze</button>
+    </form>
+
+    {% if filename %}
+        <div class="video-container">
+            <img src="{{ url_for('video_feed', filename=filename) }}" alt="Processed Video">
+        </div>
+        <div class="result-label {{ label_class }}">
+            {{ label }}
+        </div>
+    {% endif %}
+
+</body>
+</html>
