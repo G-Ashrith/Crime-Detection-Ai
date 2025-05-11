@@ -80,7 +80,7 @@ Model Info
 Demo
 ----
 🖥️ Execution Video (local path):  
-'Execution video.mp4'
+['Execution video.mp4'](https://github.com/G-Ashrith/Crime-Detection-Ai/blob/main/Execution%20video.mp4)
 
 
 Sample Output
