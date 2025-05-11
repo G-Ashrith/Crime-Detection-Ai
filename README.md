@@ -80,7 +80,7 @@ Model Info
 Demo
 ----
 🖥️ Execution Video (local path):  
-\Execution video.mp4
+'Execution video.mp4'
 
 
 Sample Output
