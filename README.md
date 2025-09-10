@@ -76,6 +76,8 @@ Model Info
 - Input: 32-frame clips of size `112x112`
 - Threshold: `0.7` for violence detection
 - Inference: Normalized frame sequence → prediction → real-time status
+- **Dataset Used:** [Real-Life Violence Situations Dataset (Kaggle)](https://www.kaggle.com/datasets/mohamedmustafa/real-life-violence-situations-dataset)
+
 
 Demo
 ----
